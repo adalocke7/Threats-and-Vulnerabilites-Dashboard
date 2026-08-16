@@ -8,5 +8,20 @@
     <body>
         <h1>Dashboard</h1>
         <div>Click on a card to learn more</div>
+        <div id = "cards-container">
+            {% for item in catalog %}
+                <div id = "card">
+                    <h4>{{ item.name }}</h4>
+                    {{ item.category }}
+                    <br>
+                    {{ item.description }}
+                    <br>
+                    {{ item.mitigation }}
+                </div>
+                {% if item.Simulation %}
+                    <button>Run simulation</button>
+                {% endif %}
+            {% endfor %}
+        </div>
     </body>
 </html>
