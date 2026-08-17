@@ -98,6 +98,8 @@ h1 {
 
 .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(180deg, rgba(17, 31, 46, 0.96), rgba(11, 22, 34, 0.92));
     border: 1px solid var(--line);
     border-radius: 18px;
@@ -183,6 +185,7 @@ h1 {
 
 button {
     width: 100%;
+    margin-top: auto;
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, var(--accent), var(--accent-strong));
