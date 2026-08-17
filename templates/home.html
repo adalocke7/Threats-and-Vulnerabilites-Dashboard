@@ -4,24 +4,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Threats and Vulnerabilities Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
     </head>
     <body>
-        <h1>Dashboard</h1>
-        <div>Click on a card to learn more</div>
-        <div id = "cards-container">
-            {% for item in catalog %}
-                <div id = "card">
-                    <h4>{{ item.name }}</h4>
-                    {{ item.category }}
-                    <br>
-                    {{ item.description }}
-                    <br>
-                    {{ item.mitigation }}
+        <div class="dashboard-shell">
+            <header class="page-header">
+                <div>
+                    <p class="eyebrow">Threat intelligence</p>
+                    <h1>Dashboard</h1>
                 </div>
-                {% if item.Simulation %}
-                    <button>Run simulation</button>
-                {% endif %}
-            {% endfor %}
+                <span class="status-pill">Live scan</span>
+            </header>
+
+            <p class="subtitle">Click on a card to learn more</p>
+
+            <div class="cards-container">
+                {% for item in catalog %}
+                    <article class="card">
+                        <div class="card-header">
+                            <h4>{{ item.name }}</h4>
+                            <span class="category-tag">{{ item.category }}</span>
+                        </div>
+
+                        <p class="description">{{ item.description }}</p>
+
+                        <div class="mitigation-box">
+                            <span class="label">Mitigation</span>
+                            <p>{{ item.mitigation }}</p>
+                        </div>
+
+                        {% if item.Simulation %}
+                            <button type="button">Run simulation</button>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            </div>
         </div>
     </body>
 </html>
