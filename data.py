@@ -2,6 +2,7 @@ catalog = [
     {
         "id": 1,
         "name": "SQL Injection",
+        "slug": "sqli",
         "route": "/sqli",
         "category": "Web/Application Vulnerability",
         "description": "Attackers insert malicious SQL query requests through an input field to manipulate a database query.",
@@ -12,6 +13,7 @@ catalog = [
     {
         "id": 2,
         "name": "XSS",
+        "slug": "xss",
         "route": "/xss",
         "category": "Web Vulnerability",
         "description": "Attackers inject malicious scripts into a trusted website to exploit vulnerabilities in the user's browser.",
@@ -46,6 +48,7 @@ catalog = [
     {
         "id": 6,
         "name": "Ransomware",
+        "slug": "ransomware",
         "route": "/ransomware",
         "category": "Malware",
         "description": "A type of malicious software that encrypts a victim's files and demands payment for the decryption key.",
@@ -120,6 +123,7 @@ catalog = [
     {
         "id": 15,
         "name": "Default Credentials",
+        "slug": "defaultcreds",
         "route": "/defaultcreds",
         "category": "Configuration Vulnerability",  
         "description": "Using default usernames and passwords that come with software or hardware, which are often publicly known and easily exploitable.",
@@ -128,3 +132,7 @@ catalog = [
         "Simulation": True
     }
 ]
+
+catalog_by_slug = {
+    item['slug']: item for item in catalog if 'slug' in item
+    }
