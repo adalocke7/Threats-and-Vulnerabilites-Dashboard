@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint, request
-from data import catalog
+from data import catalog_by_slug
 
 xss_bp = Blueprint('xss', __name__, url_prefix='/xss')
 

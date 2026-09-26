@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint, request
-from data import catalog
+from data import catalog_by_slug
 
 defaultcreds_bp = Blueprint('defaultcreds', __name__, url_prefix='/defaultcreds')
 
