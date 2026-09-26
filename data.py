@@ -2,6 +2,7 @@ catalog = [
     {
         "id": 1,
         "name": "SQL Injection",
+        "route": "/sqli",
         "category": "Web/Application Vulnerability",
         "description": "Attackers insert malicious SQL query requests through an input field to manipulate a database query.",
         "mitigation": "Use parameterized queries / prepared statements instead of string concatenation.",
@@ -11,6 +12,7 @@ catalog = [
     {
         "id": 2,
         "name": "XSS",
+        "route": "/xss",
         "category": "Web Vulnerability",
         "description": "Attackers inject malicious scripts into a trusted website to exploit vulnerabilities in the user's browser.",
         "mitigation": "Sanitize user inputs and escape output.",
@@ -44,6 +46,7 @@ catalog = [
     {
         "id": 6,
         "name": "Ransomware",
+        "route": "/ransomware",
         "category": "Malware",
         "description": "A type of malicious software that encrypts a victim's files and demands payment for the decryption key.",
         "mitigation": "Regularly back up data, keep software updated, and educate users about phishing attacks.",
@@ -117,6 +120,7 @@ catalog = [
     {
         "id": 15,
         "name": "Default Credentials",
+        "route": "/defaultcreds",
         "category": "Configuration Vulnerability",  
         "description": "Using default usernames and passwords that come with software or hardware, which are often publicly known and easily exploitable.",
         "mitigation": "Change default usernames and passwords immediately upon installation, and enforce strong password policies.",
